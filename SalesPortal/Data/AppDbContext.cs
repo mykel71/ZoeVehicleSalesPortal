@@ -28,8 +28,5 @@ namespace SalesPortal.Data
         public DbSet<Car> Cars { get; set; }
         public DbSet<Model_Car> Models_Cars { get; set; }
         public DbSet<Make> Makes { get; set; }
-
-
-       
     }
 }

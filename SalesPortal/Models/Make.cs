@@ -9,7 +9,7 @@ namespace SalesPortal.Models
 
         [Display(Name = "Logo")]
         [Required(ErrorMessage = "Profile Picture is required")]
-        public string LogoURL { get; set; }
+        public string? LogoURL { get; set; }
 
         [Display(Name = "Full Name")]
         [Required(ErrorMessage = "Full Name is required")]
@@ -18,7 +18,7 @@ namespace SalesPortal.Models
 
         [Display(Name = "Description")]
         [Required(ErrorMessage = "Description is required")]
-        public string Bio { get; set; }
+        public string? Bio { get; set; }
 
         //Relationships
         public List<Car> Cars { get; set; }
