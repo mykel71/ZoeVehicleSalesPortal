@@ -41,6 +41,9 @@ namespace SalesPortal.Migrations
                     b.Property<int>("MakeId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Mileage")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -48,9 +51,6 @@ namespace SalesPortal.Migrations
                         .HasColumnType("float");
 
                     b.Property<int>("Year")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Mileage")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
