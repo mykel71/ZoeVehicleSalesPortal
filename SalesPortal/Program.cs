@@ -1,9 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using SalesPortal.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+//DI
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

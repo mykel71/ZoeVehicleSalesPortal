@@ -3,7 +3,7 @@ using SalesPortal.Models;
 
 namespace SalesPortal.Data
 {
-    public class AppDbContext: IdentityDbContext<ApplicationUser>
+    public class AppDbContext: DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -32,5 +32,4 @@ namespace SalesPortal.Data
 
        
     }
-}
 }
