@@ -47,6 +47,12 @@ namespace SalesPortal.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Mileage")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("MakeId");

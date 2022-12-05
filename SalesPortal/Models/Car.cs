@@ -14,7 +14,7 @@ namespace SalesPortal.Models
         public double Price { get; set; }
         public string? ImageURL { get; set; }
         public CarCategory CarCategory { get; set; }
-        public date? Year { get; set; }
+        public int Year { get; set; }
         public int Mileage { get; set; }
 
         //Relationships

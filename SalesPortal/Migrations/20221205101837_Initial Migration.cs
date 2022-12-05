@@ -49,7 +49,9 @@ namespace SalesPortal.Migrations
                     Price = table.Column<double>(type: "float", nullable: false),
                     ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CarCategory = table.Column<int>(type: "int", nullable: false),
-                    MakeId = table.Column<int>(type: "int", nullable: false)
+                    MakeId = table.Column<int>(type: "int", nullable: false),
+                    Year = table.Column<int>(type: "int", nullable: false),
+                    Mileage = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
