@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -20,11 +21,29 @@ namespace SalesPortal.Controllers
         }
 
         // GET: Cars
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             var appDbContext = _context.Cars.Include(c => c.Make);
             return View(await appDbContext.ToListAsync());
         }
+
+        //[AllowAnonymous]
+        //public async Task<IActionResult> Filter(string searchString)
+        //{
+        //    var allCars = await _context.Cars(n => n.Cars);
+
+        //    if (!string.IsNullOrEmpty(searchString))
+        //    {
+
+        //        var filteredResultNew = allCars.Where(n => string.Equals(n.Name, searchString, StringComparison.CurrentCultureIgnoreCase) || string.Equals(n.Description, searchString, StringComparison.CurrentCultureIgnoreCase)).ToList();
+
+        //        return View("Index", filteredResultNew);
+        //    }
+
+        //    return View("Index", allCars);
+        //}
+
 
         // GET: Cars/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -69,6 +88,7 @@ namespace SalesPortal.Controllers
             return View(car);
         }
 
+        
         // GET: Cars/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
