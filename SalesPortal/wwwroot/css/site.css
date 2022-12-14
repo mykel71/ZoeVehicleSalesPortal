@@ -29,8 +29,8 @@ body {
 }
 
 /* Hide the images by default */
-.mySlides {
-    display:contents;
+.mySlides fade{
+    display:block;
 }
 
 /* Next & previous buttons */
